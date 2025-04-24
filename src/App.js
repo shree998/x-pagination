@@ -11,12 +11,17 @@ function App() {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    fetch('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json')
+  
+      fetch('https://geektrust.s3-ap-southeast-1.amazonws.com/adminui-problem/members.json')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setData(data);
+      }).catch((error) => {
+        alert('Failed to fetch data');
+        console.error(error);
       });
+    
   }
   , []);
 
