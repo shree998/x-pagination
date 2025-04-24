@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
   
-      fetch('https://geektrust.s3-ap-southeast-1.amazonws.com/adminui-problem/members.json')
+      fetch('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
